@@ -1,0 +1,65 @@
+{
+  "GlobalConfiguration": { "BaseUrl": "https://localhost:7139" },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/authors",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Author/GetAllAuthors",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7280
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/authors/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Author/GetAuthorById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7280
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/authors",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Author/AddAuthor",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7280
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/authors",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/Author/UpdateAuthor",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7280
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/authors",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/Author/DeleteAuthor",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7280
+        }
+      ]
+    }
+  ]
+}
